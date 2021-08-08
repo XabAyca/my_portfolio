@@ -29,7 +29,7 @@ const Contact = () => {
 
   return (
     <main>
-
+      
       <motion.div
         className="contact"
         initial="initial"

@@ -258,7 +258,9 @@
     position: absolute;
     height: 400px;
     width: 400px;
-    background: $color-3;
+    background-image: url('https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg?cs=srgb&dl=pexels-pixabay-270373.jpg&fm=jpg') ;
+    background-size: contain;
+    filter: opacity(50%);
     border-radius: 50%;
     z-index: -1;
     animation: circleAnim 16s infinite alternate;

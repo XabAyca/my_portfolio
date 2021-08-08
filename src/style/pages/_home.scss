@@ -7,7 +7,9 @@
     content: '';
     height: 900px;
     width: 900px;
-    background: $color-3;
+    background-image: url('https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?cs=srgb&dl=pexels-josh-sorenson-1714208.jpg&fm=jpg') ;
+    background-size: contain;
+    filter: opacity(50%);
     border-radius: 50%;
     position: absolute;
     bottom: -480px;
