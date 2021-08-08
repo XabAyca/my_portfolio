@@ -225,7 +225,7 @@
 
           h3 {
             padding-bottom: 10px;
-            color: rgb(2, 121, 148);
+            color: $color-4;
           }
         }
       }
@@ -259,10 +259,10 @@
     height: 400px;
     width: 400px;
     background-image: url('https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg?cs=srgb&dl=pexels-pixabay-270373.jpg&fm=jpg') ;
-    background-size: contain;
+    background-size: cover;
     filter: opacity(50%);
     border-radius: 50%;
-    z-index: -1;
+    z-index: -100;
     animation: circleAnim 16s infinite alternate;
 
     @keyframes circleAnim {

@@ -1,12 +1,12 @@
 import ButtonsBottom from 'components/ButtonsBottom';
 import ContactForm from 'components/ContactForm';
 import Logo from 'components/Logo';
-import Mouse from 'components/Mouse';
 import Navigation from 'components/Navigation';
 import SocialNetwork from 'components/SocialNetwork';
 import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { motion } from 'framer-motion';
+import Mouse from 'components/Mouse';
 
 const Contact = () => {
 
@@ -17,12 +17,12 @@ const Contact = () => {
       x:200,
     },
     visible: {
-      opacity: 1, 
+      opacity: 1,
       x:0,
     },
     exit: {
-      opacity: 0.4,
-      transition: { duration: 0.35 },
+      opacity: 0,
+      transition: { duration: 0.3 },
       x:-800,
     },
   }
@@ -45,9 +45,8 @@ const Contact = () => {
           <div className="address">
             <div className="content">
               <h4>Adresse</h4>
-              <p>Résidence du Golf</p>
-              <p>rue du Baron de Longueil</p>
-              <p>64 140 Lons</p>
+              <p>Déplacement & remote</p>
+              <p>64 000 Pau</p>
             </div>
           </div>
           <div className="phone">

@@ -4,22 +4,21 @@ const Mouse = () => {
 
   useEffect(() => {
 
-    const cursor = document.querySelector('.cursor')
     const handleCursor = (e) => {
-      let x = e.clientX * 100 / window.innerWidth + "%";
-      let y = e.clientY * 100 / window.innerHeight + "%";
+      let x = e.clientX  + "px";
+      let y = e.clientY  + "px";
 
-      cursor.style.top = y;
-      cursor.style.left = x;
+      document.querySelector('.cursor').style.top = y;
+      document.querySelector('.cursor').style.left = x;
     }
 
     window.addEventListener('mousemove', handleCursor);
 
     const handleHover = () => {
-      cursor.classList.add('hovered')
+      document.querySelector('.cursor').classList.add('hovered')
     }
     const handleLeave = () => {
-      cursor.classList.remove('hovered')
+      document.querySelector('.cursor').classList.remove('hovered')
     }
     
     document.querySelectorAll('.hover').forEach((link) => {

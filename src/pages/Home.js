@@ -27,6 +27,7 @@ const Home = () => {
 
   return (
     <main>
+      <Mouse/>
       <motion.div
         className="home"
         initial="initial"
@@ -34,7 +35,7 @@ const Home = () => {
         exit="exit"
         variants={variants}
       >
-        <Mouse/>
+        
         <Navigation />
         <SocialNetwork />
         <div className="home-main">
