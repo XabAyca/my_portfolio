@@ -6,7 +6,7 @@ export const projectsData = [
     languages: ["React", "Php", "Sass"],
     infos:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas cumque labore suscipit, pariatur laboriosam autem omnis saepe quisquam enim iste.",
-    img: "./assets/img/projet-2.jpg",
+    img: "https://images.pexels.com/photos/8567265/pexels-photo-8567265.jpeg?cs=srgb&dl=pexels-kate-gundareva-8567265.jpg&fm=jpg",
     link: "http://www.google.com",
   },
   {
@@ -16,7 +16,7 @@ export const projectsData = [
     languages: ["Symfony", "Vue"],
     infos:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas cumque labore suscipit, pariatur laboriosam autem omnis saepe quisquam enim iste.",
-    img: "./assets/img/projet-1.jpg",
+    img: "../../assets/img/projet-1.jpg",
     link: "http://www.google.com",
   },
   {

@@ -1,7 +1,6 @@
 import { projectsData } from 'data/projectsData';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { initial } from 'lodash';
 
 const Project = ( props ) => {
   const [currentProject] = useState(projectsData)

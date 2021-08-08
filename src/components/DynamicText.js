@@ -17,8 +17,8 @@ const DynamicText = () => {
       letter.textContent = array[wordIndex][letterIndex]
 
       setTimeout(() => {
-        letter.remove()
-      },5000)
+        target.lastChild.remove()
+      },3000)
     }
 
     const loop = () => { 
@@ -36,7 +36,7 @@ const DynamicText = () => {
           wordIndex++;
           setTimeout(() => {
             loop()
-          },5000)
+          },3000)
         }
       },150)
     }
