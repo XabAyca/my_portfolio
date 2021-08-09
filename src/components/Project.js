@@ -80,6 +80,9 @@ const Project = ( props ) => {
           <a href={project.link} target="_blank" rel='noopener noreferrer' className='hover'>
             <span className='button'>Voir le site</span> 
           </a>
+          <a  href={project.github} target='_blank' rel='noopener noreferrer' className='hover'>
+            <i className='fab fa-github git'></i>
+          </a>
         </div>
       </motion.div>
       <span className='random-circle' style={{left, top, transform: size}}></span>
