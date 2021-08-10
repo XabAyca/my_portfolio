@@ -301,4 +301,17 @@
       display: none;
     }
   }
+  .dark-btn {
+    top: 10px;
+    left: 900px;
+    transform: translateX(-50%);
+    transform: scale(0);
+    animation: dark 2s ease forwards;
+  
+    @keyframes dark {
+      to {
+        transform: scale(1);
+      }
+    }
+  }
 }

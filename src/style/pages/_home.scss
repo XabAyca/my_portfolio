@@ -4,10 +4,10 @@
   position: absolute;
 
   &:after {
-    content: '';
+    content: "";
     height: 900px;
     width: 900px;
-    background-image: url('https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?cs=srgb&dl=pexels-josh-sorenson-1714208.jpg&fm=jpg') ;
+    background-image: url("https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?cs=srgb&dl=pexels-josh-sorenson-1714208.jpg&fm=jpg");
     background-size: contain;
     filter: opacity(50%);
     border-radius: 50%;
@@ -17,7 +17,7 @@
     z-index: -2;
     animation: homeAnim 15s infinite alternate;
 
-    @media screen and (max-width: 650px){
+    @media screen and (max-width: 650px) {
       height: 400px;
       width: 400px;
       bottom: -270px;
@@ -31,7 +31,7 @@
         transform: scale(1.1);
       }
     }
-    @media screen and (max-width: 430px){
+    @media screen and (max-width: 430px) {
       display: none;
     }
   }
@@ -54,15 +54,15 @@
         font-family: $font-1;
         color: $black;
 
-        @media screen and (max-width: 650px){
+        @media screen and (max-width: 650px) {
           font-size: 2rem;
         }
-        @media screen and (min-width: 1200px){
+        @media screen and (min-width: 1200px) {
           font-size: 5rem;
         }
 
         &:before {
-          content: '';
+          content: "";
           position: absolute;
           height: 225px;
           width: 225px;
@@ -74,7 +74,7 @@
           animation: h1Anim 1.5s forwards ease;
           transform: scale(0);
 
-          @media screen and (max-width: 850px){
+          @media screen and (max-width: 850px) {
             height: 110px;
             width: 110px;
             left: -40px;
@@ -92,12 +92,25 @@
         font-size: 4.2rem;
         font-weight: 100;
 
-        @media screen and (max-width: 650px){
+        @media screen and (max-width: 650px) {
           font-size: 2rem;
         }
-        @media screen and (min-width: 1200px){
+        @media screen and (min-width: 1200px) {
           font-size: 5rem;
         }
+      }
+    }
+  }
+
+  .dark-btn {
+    top: 120px;
+    left: 90px;
+    transform: scale(0);
+    animation: dark 2s ease forwards;
+  
+    @keyframes dark {
+      to {
+        transform: scale(1);
       }
     }
   }

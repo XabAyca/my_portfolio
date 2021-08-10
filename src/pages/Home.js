@@ -5,6 +5,7 @@ import Navigation from 'components/Navigation';
 import SocialNetwork from 'components/SocialNetwork';
 import React from 'react';
 import { motion } from 'framer-motion';
+import DarkBtn from 'components/DarkBtn';
 
 const Home = () => {
 
@@ -35,7 +36,7 @@ const Home = () => {
         exit="exit"
         variants={variants}
       >
-        
+        <DarkBtn/>
         <Navigation />
         <SocialNetwork />
         <div className="home-main">

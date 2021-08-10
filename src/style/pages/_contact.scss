@@ -317,4 +317,16 @@
       }
     }
   }
+  .dark-btn{
+    top: 120px;
+    left: 90px;
+    transform: scale(0);
+    animation: dark 2s ease forwards;
+  
+    @keyframes dark {
+      to {
+        transform: scale(1);
+      }
+    }
+  }
 }

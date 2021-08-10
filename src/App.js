@@ -1,13 +1,16 @@
 import Contact from 'pages/Contact';
 import Home from 'pages/Home';
 import {Project1,Project2,Project3,Project4} from 'pages/Projects';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Redirect, Route, Switch, useHistory, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import DarkMode from 'components/DarkMode';
 
 const App = () => {
   const location = useLocation();
   const history = useHistory();
+  const [darkMode,setDarkMode]= useState(null)
+
 
   React.useEffect(() => {
 
@@ -62,18 +65,38 @@ const App = () => {
 
   }, [history])
 
+  useEffect(() => {
+    const dark = JSON.parse(localStorage.getItem('ThemeContext:darkMode'));
+    if (dark !== undefined && dark !== null) {
+      setDarkMode(dark);
+    }else if (
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: light)').matches
+    ) {
+      setDarkMode(false);
+    }
+  }, []);
+
   return (
-    <AnimatePresence>
-      <Switch location={location} key={location.pathname}>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/project-1" component={Project1}/>
-        <Route exact path="/project-2" component={Project2}/>
-        <Route exact path="/project-3" component={Project3}/>
-        <Route exact path="/project-4" component={Project4}/>
-        <Route exact path="/contact" component={Contact}/>
-        <Redirect to="/" />
-      </Switch>
-    </AnimatePresence>
+    <DarkMode.Provider value={{
+      darkMode,
+      toggleMode: () => {
+        localStorage.setItem('ThemeContext:darkMode', String(!darkMode));
+        setDarkMode(!darkMode);
+      }
+    }}>
+      <AnimatePresence>
+        <Switch location={location} key={location.pathname}>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/project-1" component={Project1}/>
+          <Route exact path="/project-2" component={Project2}/>
+          <Route exact path="/project-3" component={Project3}/>
+          <Route exact path="/project-4" component={Project4}/>
+          <Route exact path="/contact" component={Contact}/>
+          <Redirect to="/" />
+        </Switch>
+        </AnimatePresence>
+    </DarkMode.Provider>
   );
 };
 

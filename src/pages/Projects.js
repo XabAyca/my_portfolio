@@ -1,4 +1,5 @@
 import ButtonsBottom from 'components/ButtonsBottom';
+import DarkBtn from 'components/DarkBtn';
 import Logo from 'components/Logo';
 import Mouse from 'components/Mouse';
 import Navigation from 'components/Navigation';
@@ -12,6 +13,7 @@ export const Project1 = () => {
       <div className="project">
         <Mouse/>
         <Navigation />
+        <DarkBtn/>
         <Logo />
         <Project projectNumber={0}/>
         < ButtonsBottom left={"/"} right={"/project-2"}/>
@@ -26,6 +28,7 @@ export const Project2 = () => {
       <div className="project">
         <Mouse/>
         <Navigation />
+        <DarkBtn/>
         <Logo />
         <Project projectNumber={1}/>
         < ButtonsBottom left={"/project-1"} right={"/project-3"}/>
@@ -40,6 +43,7 @@ export const Project3 = () => {
       <div className="project">
         <Mouse/>
         <Navigation />
+        <DarkBtn/>
         <Logo />
         <Project projectNumber={2}/>
         < ButtonsBottom left={"/project-2"} right={"/project-4"}/>
@@ -54,6 +58,7 @@ export const Project4 = () => {
       <div className="project">
         <Mouse/>
         <Navigation />
+        <DarkBtn/>
         <Logo />
         <Project projectNumber={3}/>
         < ButtonsBottom left={"/project-3"} right={"/contact"}/>

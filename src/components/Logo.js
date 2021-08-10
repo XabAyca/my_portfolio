@@ -2,7 +2,9 @@ import React from 'react';
 
 const Logo = () => {
   return (
-    <span className='logo'>Xabi</span>
+    <div>
+      <span className='logo'>Xabi</span>
+    </div>
   );
 };
 

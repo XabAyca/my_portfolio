@@ -7,6 +7,7 @@ import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { motion } from 'framer-motion';
 import Mouse from 'components/Mouse';
+import DarkBtn from 'components/DarkBtn';
 
 const Contact = () => {
 
@@ -39,6 +40,7 @@ const Contact = () => {
       >
         <Mouse />
         <Navigation />
+        <DarkBtn/>
         <Logo />
         <ContactForm />
         <div className="contact-infos">
