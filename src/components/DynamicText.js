@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import DarkMode from './DarkMode';
 
 const DynamicText = () => {
+  const {darkMode}=useContext(DarkMode)
 
   React.useEffect(() => {
     const target = document.getElementById('text-target')
@@ -47,7 +49,7 @@ const DynamicText = () => {
 
 
   return (
-    <span className='dynamic-text'>
+    <span className={darkMode?'dynamic-text dark' : 'dynamic-text'}>
       <span className='simply'>Développeur</span>
       <span id='text-target'></span>
     </span>

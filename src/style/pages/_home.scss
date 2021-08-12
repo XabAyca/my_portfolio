@@ -103,14 +103,30 @@
   }
 
   .dark-btn {
-    top: 120px;
-    left: 90px;
+    top: 160px;
+    left: 30px;
     transform: scale(0);
     animation: dark 2s ease forwards;
   
     @keyframes dark {
       to {
         transform: scale(1);
+      }
+    }
+  }
+
+  &.dark{
+    z-index: 0;
+    background-color: $background-color-dark;
+    .home-main{
+      .main-content{
+        h1{
+          color:$primary-color-dark;
+      
+          &:before{
+            border-color: $secondary-color-dark;
+          } 
+        }
       }
     }
   }

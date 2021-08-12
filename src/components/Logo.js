@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import DarkMode from './DarkMode';
 
 const Logo = () => {
+  const {darkMode} = useContext(DarkMode)
   return (
     <div>
-      <span className='logo'>Xabi</span>
+      <span className={darkMode?'logo dark':'logo'}>Xabi</span>
     </div>
   );
 };

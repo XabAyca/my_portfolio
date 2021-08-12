@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import DarkMode from './DarkMode';
 
 const ButtonsBottom = (props) => {
+  const { darkMode } = useContext(DarkMode)
+  
   return (
-    <div className="scroll-bottom">
+    <div className={darkMode?"scroll-bottom dark":"scroll-bottom"}>
       <div className='sb-main'>
         {props.left && (
           <NavLink to={props.left} className='left hover'>

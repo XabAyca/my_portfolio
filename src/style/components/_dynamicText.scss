@@ -38,4 +38,21 @@
       opacity: 1;
     }
   }
+
+  &.dark{
+    .simply{
+      color:$secondary-color-dark
+    }
+    #text-target{
+      animation: color2 30s alternate infinite;
+    }
+    @keyframes color2 {
+      0% {
+        color: $primary-color-dark;
+      }
+      100% {
+        color: $secondary-color-dark;
+      }
+  }
+  }
 }

@@ -3,13 +3,15 @@ import ContactForm from 'components/ContactForm';
 import Logo from 'components/Logo';
 import Navigation from 'components/Navigation';
 import SocialNetwork from 'components/SocialNetwork';
-import React from 'react';
+import React, { useContext } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { motion } from 'framer-motion';
 import Mouse from 'components/Mouse';
 import DarkBtn from 'components/DarkBtn';
+import DarkMode from 'components/DarkMode';
 
 const Contact = () => {
+  const {darkMode}=useContext(DarkMode)
 
   const variants = {
     initial: {
@@ -32,7 +34,7 @@ const Contact = () => {
     <main>
       
       <motion.div
-        className="contact"
+        className={darkMode?"contact dark":"contact"}
         initial="initial"
         animate="visible"
         exit="exit"

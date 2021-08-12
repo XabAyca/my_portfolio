@@ -3,11 +3,13 @@ import DynamicText from 'components/DynamicText';
 import Mouse from 'components/Mouse';
 import Navigation from 'components/Navigation';
 import SocialNetwork from 'components/SocialNetwork';
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import DarkBtn from 'components/DarkBtn';
+import DarkMode from 'components/DarkMode';
 
 const Home = () => {
+  const {darkMode} = useContext(DarkMode)
 
   const variants = {
     initial: {
@@ -30,7 +32,7 @@ const Home = () => {
     <main>
       <Mouse/>
       <motion.div
-        className="home"
+        className={darkMode?"home dark":"home"}
         initial="initial"
         animate="visible"
         exit="exit"

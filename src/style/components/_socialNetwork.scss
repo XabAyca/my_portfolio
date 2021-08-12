@@ -24,4 +24,12 @@
       transition: 1.1s ease-out;
     }
   }
+
+  &.dark{
+
+    a{
+      color:$primary-color-dark;
+    }
+
+  }
 }

@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { projectsData } from 'data/projectsData';
+import DarkMode from './DarkMode';
 
 const Navigation = () => {
-  const [currentProject] = React.useState(projectsData)
+  const [currentProject] = React.useState(projectsData);
+  const {darkMode} =useContext(DarkMode)
 
   return (
-    <div className='navigation'>
+    <div className={darkMode?'navigation dark':'navigation'}>
       <ul>
         <NavLink to="/" exact className='hover' activeClassName='nav-active'>
           <li>Accueil</li>

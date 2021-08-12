@@ -1,10 +1,12 @@
 import { projectsData } from 'data/projectsData';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { motion } from 'framer-motion';
+import DarkMode from './DarkMode';
 
 const Project = ( props ) => {
   const [currentProject] = useState(projectsData)
   const project = currentProject[props.projectNumber]
+  const {darkMode}=useContext(DarkMode)
 
   let left = Math.floor(Math.random()* 200 + 700) + "px"
   let top = Math.floor(Math.random() * 200 + 150) + "px"
@@ -47,7 +49,7 @@ const Project = ( props ) => {
 
   return (
     <motion.div
-      className="project-main"
+      className={darkMode?"project-main dark":"project-main"}
       initial="initial"
       animate="visible"
       exit="exit"

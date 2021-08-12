@@ -1,16 +1,19 @@
 import ButtonsBottom from 'components/ButtonsBottom';
 import DarkBtn from 'components/DarkBtn';
+import DarkMode from 'components/DarkMode';
 import Logo from 'components/Logo';
 import Mouse from 'components/Mouse';
 import Navigation from 'components/Navigation';
 import Project from 'components/Project';
-import React from 'react';
+import React, { useContext } from 'react';
 
 
-export const Project1 = () => { 
+export const Project1 = () => {
+  const { darkMode } = useContext(DarkMode)
+  
   return (
     <main>
-      <div className="project">
+      <div className={darkMode?"project dark":"project"}>
         <Mouse/>
         <Navigation />
         <DarkBtn/>
@@ -23,9 +26,10 @@ export const Project1 = () => {
 } 
 
 export const Project2 = () => {
+  const { darkMode } = useContext(DarkMode)
   return (
     <main>
-      <div className="project">
+      <div className={darkMode?"project dark":"project"}>
         <Mouse/>
         <Navigation />
         <DarkBtn/>
@@ -38,9 +42,10 @@ export const Project2 = () => {
 }
 
 export const Project3 = () => {
+  const { darkMode } = useContext(DarkMode)
   return (
     <main>
-      <div className="project">
+      <div className={darkMode?"project dark":"project"}>
         <Mouse/>
         <Navigation />
         <DarkBtn/>
@@ -53,9 +58,10 @@ export const Project3 = () => {
 }
 
 export const Project4 = () => {
+  const { darkMode } = useContext(DarkMode)
   return (
     <main>
-      <div className="project">
+      <div className={darkMode?"project dark":"project"}>
         <Mouse/>
         <Navigation />
         <DarkBtn/>

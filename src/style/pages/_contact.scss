@@ -149,9 +149,7 @@
             transform: translate(0px, 0px);
           }
         }
-        input {
-          border: none;
-        }
+
       }
       textarea {
         resize: none;
@@ -326,6 +324,43 @@
     @keyframes dark {
       to {
         transform: scale(1);
+      }
+    }
+  }
+
+  &.dark{
+    background-color: $background-color-dark;
+    z-index: 0;
+    p{
+      color: $secondary-color-dark;
+    }
+    h4{
+      color: $primary-color-dark;
+    }
+    &::after{
+      background-color: $black;
+    }
+    .contact-form{
+      h2{
+        color:$primary-color-dark;
+        &::after{
+          border-color: $secondary-color-dark;
+        }
+      }
+      input,
+      textarea{
+        border-color: $secondary-color-dark;
+      }
+      .error::placeholder{
+          color: $danger;
+      }
+      .button{
+        color:$primary-color-dark;
+        background-color: $secondary-color-dark;
+        &:hover{
+        color:$secondary-color-dark;
+        background-color: $primary-color-dark;          
+        }
       }
     }
   }

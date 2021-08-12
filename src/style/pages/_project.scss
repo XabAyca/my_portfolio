@@ -156,6 +156,7 @@
           font-size: .8rem;
         }
       }
+
     }
     .img-content {
       position: relative;
@@ -311,6 +312,68 @@
     @keyframes dark {
       to {
         transform: scale(1);
+      }
+    }
+  }
+
+  &.dark{
+    background-color: $background-color-dark;
+    z-index: 0;
+
+    &:after {
+      border-color: $primary-color-dark;
+    }
+
+    .navigation{
+      &:before{
+        background-color: $black;
+      }
+    }
+    .project-main{
+      h1{
+        color:$primary-color-dark;
+      }
+      p{
+        color:$secondary-color-dark;
+        &:after{
+          background-color: $black;
+        }
+      }
+      li{
+        color: $primary-color-dark;
+      }
+
+      .img-content{
+        .img-container{
+          h3{
+            color:$primary-color-dark
+          }
+          img{
+            &:hover,
+            span:hover img {
+              transform: scale(1.2);
+              filter: opacity(15%) contrast(50%);
+            }
+          }
+        }
+      }
+    }
+    .button-container{
+      a {
+        .button {
+          color:$primary-color-dark;
+          background-color: $secondary-color-dark;
+        &:hover {
+            color: $secondary-color-dark;
+            background: $primary-color-dark;
+          }
+        }
+        .git{
+          color:$primary-color-dark;
+          &:hover{
+            color:$secondary-color-dark;
+          }
+        }   
       }
     }
   }

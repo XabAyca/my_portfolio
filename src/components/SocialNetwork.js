@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import DarkMode from './DarkMode';
 
 const SocialNetwork = () => {
+  const {darkMode}= useContext(DarkMode)
 
   const anim = () => {
     let navLinks = document.querySelectorAll('.social-network a')
@@ -19,7 +21,7 @@ const SocialNetwork = () => {
   }
 
   return (
-    <div className="social-network">
+    <div className={darkMode?"social-network dark":"social-network"}>
       <ul className="content">
         <a onMouseOver={anim} href='https://www.facebook.com/profile.php?id=100004295178969' target='_blank' rel='noopener noreferrer' className='hover'>
           <li><i className='fab fa-facebook-f'></i></li>

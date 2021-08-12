@@ -63,4 +63,13 @@
       }
     }
   }
+
+  &.dark{
+    color:$primary-color-dark;
+    .sb-main{
+      span{
+        color:$primary-color-dark;
+      }
+    }
+  }
 }

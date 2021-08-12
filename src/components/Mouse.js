@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
+import DarkMode from './DarkMode';
 
 const Mouse = () => {
+  const {darkMode}= useContext(DarkMode)
 
   useEffect(() => {
 
@@ -29,7 +31,7 @@ const Mouse = () => {
 
 
   return (
-    <span className='cursor'></span>
+    <span className={darkMode?'cursor dark':'cursor'}></span>
   );
 };
 

@@ -31,9 +31,9 @@
       width: 50px;
     }
   }
-  .nav-active {
-    color: $black;
-  }
+    .nav-active {
+      color: $black;
+    }
   ul:hover li:not(:hover) {
     opacity: .5;
   }
@@ -44,7 +44,6 @@
   .nav-portfolio {
     cursor: pointer;
     display: flex;
-    // padding-right: 6rem;
     transition: .5s;
 
     &:hover .nav-projects,
@@ -74,5 +73,25 @@
         transition: .3s;
       }
     }
+  }
+
+  &.dark{
+    color:$primary-color-dark;
+    a{
+      color:$primary-color-dark;  
+    }
+    .nav-active {
+      color: $black;
+    }
+    &:before{
+      background: $secondary-color-dark;
+    }
+    .nav-projects{
+      li{
+        color:$primary-color-dark
+      }
+    }
+
+
   }
 }

@@ -7,7 +7,7 @@ const DarkBtn = () => {
   console.log(darkMode)
   
   return (
-      <motion.span drag onDragEnd className='dark-btn' onClick={toggleMode}>{darkMode? <i className="far fa-sun"></i> : <i className="far fa-moon"></i> }</motion.span>
+      <motion.span drag onDragEnd className={darkMode?'dark-btn hover dark':'dark-btn hover'} onClick={toggleMode}>Mode&nbsp;{darkMode?<i className="far fa-sun"></i> : <i className="far fa-moon"></i> }</motion.span>
   );
 };
 
